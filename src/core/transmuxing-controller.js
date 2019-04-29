@@ -245,7 +245,7 @@ class TransmuxingController {
         } else if ((probeData = FLVDemuxer.probe(data)).match) {
             // Always create new FLVDemuxer
             this._demuxer = new FLVDemuxer(probeData, this._config);
-
+        
             if (!this._remuxer) {
                 this._remuxer = new MP4Remuxer(this._config);
             }
